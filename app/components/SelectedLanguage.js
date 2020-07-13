@@ -15,9 +15,20 @@ const SelectedLanguage = (props) =>  {
             </li>
             );
         })}
+        <li><LangInput onTextUpdate={text => props.onSelect(text)}/></li>
         </ul>
   )
 }
+
+const LangInput = (props) => {
+    return(
+        <div>
+            <input type="text"
+                   name="lang"
+                   onChange={e => props.onTextUpdate(e.target.value)}/>
+        </div>
+    );
+} 
 
 SelectedLanguage.propTypes = {
     selectedLanguage: PropTypes.string.isRequired,
