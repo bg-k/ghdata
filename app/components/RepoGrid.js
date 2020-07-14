@@ -16,8 +16,8 @@ const RepoGrid = (props) => {
                                     alt={'Avatar for ' + repo.owner.login}
                                 />
                             </li>
-                            <li><a href={repo.html_url}>{repo.name}</a></li>
-                            <li>@{repo.owner.login}</li>
+                            <li><a className='item-name' href={repo.html_url}>{repo.name}</a></li>
+                            <li className='item-name'>@{repo.owner.login}</li>
                             <li>{repo.stargazers_count} stars</li>
                         </ul>
                 </li>);
